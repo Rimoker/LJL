@@ -26,7 +26,7 @@
 cd "g:\Docs\Coding\LearnJapaneseLanguage - LJL"
 git init
 git add .
-git commit -m "v0.8 - Первая публикация"
+git commit -m "LJL - v0.8 alpha"
 ```
 
 #### Шаг 2: Создание репозитория на GitHub
@@ -43,7 +43,7 @@ git commit -m "v0.8 - Первая публикация"
 **ВАЖНО**: Замените `YOUR_USERNAME` на ваш username GitHub!
 
 ```powershell
-git remote add origin https://github.com/Rimoker/LJL.git
+git remote add origin https://github.com/YOUR_USERNAME/LJL.git
 git branch -M main
 git push -u origin main
 ```
