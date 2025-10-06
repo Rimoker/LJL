@@ -1,0 +1,851 @@
+/* ============================================
+   LJL v0.7 - Apple-inspired Design System
+   ============================================ */
+
+/* CSS Variables */
+:root {
+  /* Theme colors (set dynamically by ThemeManager) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f2f2f7;
+  --bg-tertiary: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #3c3c43;
+  --text-tertiary: #3c3c4399;
+  --border-color: #d1d1d6;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Default customizable values */
+  --primary-color: #007aff;
+  --font-size-base: 16px;
+  --font-size-annotation: 24px;
+  --draw-field-size: 256px;
+  --kana-card-size: 80px;
+  --border-radius: 12px;
+  --animation-duration: 0.3s;
+
+  /* Font system */
+  --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #000000;
+  --bg-secondary: #1c1c1e;
+  --bg-tertiary: #2c2c2e;
+  --text-primary: #ffffff;
+  --text-secondary: #ebebf5;
+  --text-tertiary: #ebebf599;
+  --border-color: #38383a;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-system);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background var(--animation-duration) ease,
+    color var(--animation-duration) ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 24px;
+  background: var(--bg-tertiary);
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: var(--shadow);
+  transition: all var(--animation-duration) ease;
+}
+
+/* Header */
+h1 {
+  font-size: calc(var(--font-size-base) * 2.25);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: calc(var(--font-size-base) * 1.5);
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: calc(var(--font-size-base) * 1.125);
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+/* Settings gear button */
+.settings-gear {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all var(--animation-duration) ease;
+}
+
+.settings-gear:hover {
+  background: var(--border-color);
+  transform: rotate(90deg);
+}
+
+.settings-gear:active {
+  transform: rotate(90deg) scale(0.95);
+}
+/* Controls */
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  transition: all var(--animation-duration) ease;
+}
+
+.controls label {
+  font-size: calc(var(--font-size-base) * 0.875);
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.controls select,
+.controls input[type="file"] {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: calc(var(--border-radius) * 0.75);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: calc(var(--font-size-base) * 0.875);
+  transition: all var(--animation-duration) ease;
+  cursor: pointer;
+}
+
+.controls select:hover,
+.controls input[type="file"]:hover {
+  border-color: var(--primary-color);
+}
+
+.controls select:focus,
+.controls input[type="file"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+/* Kana Display */
+.kana-display {
+  font-size: 96px;
+  text-align: center;
+  padding: 32px 0;
+  min-height: 140px;
+  color: var(--text-primary);
+  font-weight: 300;
+  transition: all var(--animation-duration) ease;
+  animation: fadeIn var(--animation-duration) ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* Romaji Input Area */
+.romaji-area {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
+  animation: slideUp var(--animation-duration) ease;
+}
+
+.romaji-area input {
+  padding: 12px 16px;
+  font-size: calc(var(--font-size-base) * 1.125);
+  width: 280px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transition: all var(--animation-duration) ease;
+  font-family: var(--font-system);
+}
+
+.romaji-area input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+}
+
+.romaji-area input::placeholder {
+  color: var(--text-tertiary);
+}
+/* Canvas Drawing Area */
+.canvas-wrap {
+  position: relative;
+  width: 512px;
+  height: 512px;
+  margin: 0 auto;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-tertiary);
+  overflow: hidden;
+  transition: all var(--animation-duration) ease;
+}
+
+canvas {
+  display: block;
+}
+
+canvas.ref {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.draw-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  animation: slideUp var(--animation-duration) ease 0.1s backwards;
+}
+
+.draw-controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: calc(var(--font-size-base) * 0.875);
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.draw-controls input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+/* Feedback Messages */
+.feedback {
+  text-align: center;
+  font-weight: 600;
+  font-size: calc(var(--font-size-base) * 1.125);
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  transition: all var(--animation-duration) ease;
+  animation: scaleIn var(--animation-duration) ease;
+}
+
+.feedback.success {
+  color: #34c759;
+  background: rgba(52, 199, 89, 0.1);
+}
+
+.feedback.error {
+  color: #ff3b30;
+  background: rgba(255, 59, 48, 0.1);
+  animation: shake 0.5s ease;
+}
+
+.draw-result {
+  text-align: center;
+  margin-top: 12px;
+  font-size: calc(var(--font-size-base) * 0.875);
+  color: var(--text-secondary);
+  animation: fadeIn var(--animation-duration) ease;
+}
+
+.api-status {
+  text-align: center;
+  margin-top: 12px;
+  font-size: calc(var(--font-size-base) * 0.875);
+  font-weight: 500;
+  min-height: 24px;
+  transition: all var(--animation-duration) ease;
+  animation: fadeIn var(--animation-duration) ease;
+}
+/* Stats Section */
+.stats {
+  margin-top: 32px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  transition: all var(--animation-duration) ease;
+}
+
+#statsContent {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border-radius: calc(var(--border-radius) * 0.75);
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-family: var(--font-system);
+  font-size: calc(var(--font-size-base) * 0.875);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--animation-duration) ease;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 122, 255, 0.2);
+}
+
+button.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+
+button.btn-secondary:hover {
+  background: var(--border-color);
+  box-shadow: none;
+}
+
+/* Footer */
+footer {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: calc(var(--font-size-base) * 0.875);
+}
+
+footer code {
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "SF Mono", "Monaco", "Menlo", monospace;
+}
+
+/* Multi-cell Kana Display */
+.kana-cells {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: stretch;
+  animation: slideUp var(--animation-duration) ease;
+}
+
+.kana-cell {
+  min-width: var(--kana-card-size);
+  min-height: calc(var(--kana-card-size) * 1.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--kana-card-size) * 0.8);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-tertiary);
+  padding: 12px;
+  transition: all var(--animation-duration) ease;
+  animation: scaleIn var(--animation-duration) ease;
+}
+
+.kana-cell:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 122, 255, 0.15);
+}
+
+.kana-cell.small {
+  font-size: calc(var(--kana-card-size) * 0.5);
+}
+
+.kana-annotation {
+  text-align: center;
+  color: var(--text-tertiary);
+  margin-top: 12px;
+  font-size: var(--font-size-annotation);
+}
+
+/* Draw Canvases Layout */
+.draw-canvases {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeIn var(--animation-duration) ease;
+}
+
+.draw-canvas-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.draw-canvas-overlay {
+  position: relative;
+  width: var(--draw-field-size);
+  height: var(--draw-field-size);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--animation-duration) ease;
+}
+
+.draw-canvas-overlay:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.draw-canvas-overlay canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--draw-field-size);
+  height: var(--draw-field-size);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.ref-canvas {
+  z-index: 1;
+  opacity: 0.15;
+  background: var(--bg-tertiary);
+}
+
+.user-canvas {
+  z-index: 2;
+  background: transparent;
+}
+
+/* Hide reference canvases */
+.draw-area.refs-hidden .ref-canvas {
+  display: none !important;
+}
+
+/* Per-field result styling */
+.draw-result-span.pass {
+  color: #34c759;
+  font-weight: 600;
+}
+
+.draw-result-span.fail {
+  color: #ff3b30;
+  font-weight: 600;
+}
+
+/* ============================================
+   Modal Windows (Alphabet & Settings)
+   ============================================ */
+
+/* Base Modal Styles */
+.alphabet-modal,
+.settings-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--animation-duration) ease;
+  animation: fadeIn var(--animation-duration) ease;
+}
+
+.alphabet-modal.hidden,
+.settings-modal.hidden {
+  display: none !important;
+}
+
+.alphabet-modal-content,
+.settings-modal-content {
+  background: var(--bg-tertiary);
+  padding: 32px 24px 24px 24px;
+  border-radius: calc(var(--border-radius) * 2);
+  min-width: 340px;
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: scaleIn var(--animation-duration) ease;
+  border: 1px solid var(--border-color);
+}
+
+.alphabet-modal-content h2,
+.settings-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: calc(var(--font-size-base) * 1.75);
+}
+
+.alphabet-modal-close,
+.settings-modal-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--animation-duration) ease;
+  color: var(--text-secondary);
+}
+
+.alphabet-modal-close:hover,
+.settings-modal-close:hover {
+  background: var(--border-color);
+  transform: rotate(90deg);
+}
+
+/* Alphabet Table */
+.alphabet-modal table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.alphabet-modal td {
+  border: 1px solid var(--border-color);
+  padding: 12px 14px;
+  text-align: center;
+  font-size: 32px;
+  min-width: 44px;
+  background: var(--bg-tertiary);
+  transition: all var(--animation-duration) ease;
+}
+
+.alphabet-modal td:hover {
+  background: var(--bg-secondary);
+  transform: scale(1.1);
+}
+
+.alphabet-modal td div {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ============================================
+   Settings Panel Styles
+   ============================================ */
+
+.settings-section {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-section:last-of-type {
+  border-bottom: none;
+}
+
+.setting-item {
+  margin-bottom: 16px;
+}
+
+.setting-item label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: calc(var(--font-size-base) * 0.875);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.setting-item label span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-select {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: calc(var(--border-radius) * 0.75);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: calc(var(--font-size-base) * 0.875);
+  font-family: var(--font-system);
+  cursor: pointer;
+  transition: all var(--animation-duration) ease;
+}
+
+.setting-select:hover {
+  border-color: var(--primary-color);
+}
+
+.setting-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.setting-range {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-secondary);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.setting-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+  transition: all var(--animation-duration) ease;
+}
+
+.setting-range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.setting-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+  transition: all var(--animation-duration) ease;
+}
+
+.setting-range::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.setting-color {
+  width: 60px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: calc(var(--border-radius) * 0.75);
+  cursor: pointer;
+  transition: all var(--animation-duration) ease;
+}
+
+.setting-color:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.setting-checkbox {
+  flex-direction: row !important;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.setting-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+  margin-right: 8px;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  .container {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: calc(var(--font-size-base) * 1.75);
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .kana-display {
+    font-size: 72px;
+    padding: 24px 0;
+  }
+
+  .romaji-area input {
+    width: 100%;
+  }
+
+  .draw-canvas-overlay {
+    width: calc(var(--draw-field-size) * 0.8);
+    height: calc(var(--draw-field-size) * 0.8);
+  }
+
+  .draw-canvas-overlay canvas {
+    width: calc(var(--draw-field-size) * 0.8);
+    height: calc(var(--draw-field-size) * 0.8);
+  }
+
+  .settings-modal-content,
+  .alphabet-modal-content {
+    width: 95vw;
+    padding: 24px 16px 16px 16px;
+  }
+
+  .settings-actions {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   Accessibility & Focus States
+   ============================================ */
+
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .controls,
+  .draw-controls,
+  .settings-gear,
+  button {
+    display: none !important;
+  }
+
+  .container {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}

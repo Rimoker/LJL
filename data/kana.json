@@ -1,0 +1,264 @@
+{
+  "hiragana": [
+    { "kana": "あ", "romaji": "a", "strokes": [] },
+    { "kana": "い", "romaji": "i", "strokes": [] },
+    { "kana": "う", "romaji": "u", "strokes": [] },
+    { "kana": "え", "romaji": "e", "strokes": [] },
+    { "kana": "お", "romaji": "o", "strokes": [] },
+
+    { "kana": "か", "romaji": "ka", "strokes": [] },
+    { "kana": "き", "romaji": "ki", "strokes": [] },
+    { "kana": "く", "romaji": "ku", "strokes": [] },
+    { "kana": "け", "romaji": "ke", "strokes": [] },
+    { "kana": "こ", "romaji": "ko", "strokes": [] },
+
+    { "kana": "さ", "romaji": "sa", "strokes": [] },
+    { "kana": "し", "romaji": "shi", "strokes": [] },
+    { "kana": "す", "romaji": "su", "strokes": [] },
+    { "kana": "せ", "romaji": "se", "strokes": [] },
+    { "kana": "そ", "romaji": "so", "strokes": [] },
+
+    { "kana": "た", "romaji": "ta", "strokes": [] },
+    { "kana": "ち", "romaji": "chi", "strokes": [] },
+    { "kana": "つ", "romaji": "tsu", "strokes": [] },
+    { "kana": "て", "romaji": "te", "strokes": [] },
+    { "kana": "と", "romaji": "to", "strokes": [] },
+
+    { "kana": "な", "romaji": "na", "strokes": [] },
+    { "kana": "に", "romaji": "ni", "strokes": [] },
+    { "kana": "ぬ", "romaji": "nu", "strokes": [] },
+    { "kana": "ね", "romaji": "ne", "strokes": [] },
+    { "kana": "の", "romaji": "no", "strokes": [] },
+
+    { "kana": "は", "romaji": "ha", "strokes": [] },
+    { "kana": "ひ", "romaji": "hi", "strokes": [] },
+    { "kana": "ふ", "romaji": "fu", "strokes": [] },
+    { "kana": "へ", "romaji": "he", "strokes": [] },
+    { "kana": "ほ", "romaji": "ho", "strokes": [] },
+
+    { "kana": "ま", "romaji": "ma", "strokes": [] },
+    { "kana": "み", "romaji": "mi", "strokes": [] },
+    { "kana": "む", "romaji": "mu", "strokes": [] },
+    { "kana": "め", "romaji": "me", "strokes": [] },
+    { "kana": "も", "romaji": "mo", "strokes": [] },
+
+    { "kana": "や", "romaji": "ya", "strokes": [] },
+    { "kana": "ゆ", "romaji": "yu", "strokes": [] },
+    { "kana": "よ", "romaji": "yo", "strokes": [] },
+
+    { "kana": "ら", "romaji": "ra", "strokes": [] },
+    { "kana": "り", "romaji": "ri", "strokes": [] },
+    { "kana": "る", "romaji": "ru", "strokes": [] },
+    { "kana": "れ", "romaji": "re", "strokes": [] },
+    { "kana": "ろ", "romaji": "ro", "strokes": [] },
+
+    { "kana": "わ", "romaji": "wa", "strokes": [] },
+    { "kana": "を", "romaji": "wo", "strokes": [] },
+    { "kana": "ん", "romaji": "n", "strokes": [] },
+
+    { "kana": "が", "romaji": "ga", "strokes": [] },
+    { "kana": "ぎ", "romaji": "gi", "strokes": [] },
+    { "kana": "ぐ", "romaji": "gu", "strokes": [] },
+    { "kana": "げ", "romaji": "ge", "strokes": [] },
+    { "kana": "ご", "romaji": "go", "strokes": [] },
+
+    { "kana": "ざ", "romaji": "za", "strokes": [] },
+    { "kana": "じ", "romaji": "ji", "strokes": [] },
+    { "kana": "ず", "romaji": "zu", "strokes": [] },
+    { "kana": "ぜ", "romaji": "ze", "strokes": [] },
+    { "kana": "ぞ", "romaji": "zo", "strokes": [] },
+
+    { "kana": "だ", "romaji": "da", "strokes": [] },
+    { "kana": "ぢ", "romaji": "ji", "strokes": [] },
+    { "kana": "づ", "romaji": "zu", "strokes": [] },
+    { "kana": "で", "romaji": "de", "strokes": [] },
+    { "kana": "ど", "romaji": "do", "strokes": [] },
+
+    { "kana": "ば", "romaji": "ba", "strokes": [] },
+    { "kana": "び", "romaji": "bi", "strokes": [] },
+    { "kana": "ぶ", "romaji": "bu", "strokes": [] },
+    { "kana": "べ", "romaji": "be", "strokes": [] },
+    { "kana": "ぼ", "romaji": "bo", "strokes": [] },
+
+    { "kana": "ぱ", "romaji": "pa", "strokes": [] },
+    { "kana": "ぴ", "romaji": "pi", "strokes": [] },
+    { "kana": "ぷ", "romaji": "pu", "strokes": [] },
+    { "kana": "ぺ", "romaji": "pe", "strokes": [] },
+    { "kana": "ぽ", "romaji": "po", "strokes": [] },
+
+    { "kana": "きゃ", "romaji": "kya", "strokes": [] },
+    { "kana": "きゅ", "romaji": "kyu", "strokes": [] },
+    { "kana": "きょ", "romaji": "kyo", "strokes": [] },
+
+    { "kana": "しゃ", "romaji": "sha", "strokes": [] },
+    { "kana": "しゅ", "romaji": "shu", "strokes": [] },
+    { "kana": "しょ", "romaji": "sho", "strokes": [] },
+
+    { "kana": "ちゃ", "romaji": "cha", "strokes": [] },
+    { "kana": "ちゅ", "romaji": "chu", "strokes": [] },
+    { "kana": "ちょ", "romaji": "cho", "strokes": [] },
+
+    { "kana": "にゃ", "romaji": "nya", "strokes": [] },
+    { "kana": "にゅ", "romaji": "nyu", "strokes": [] },
+    { "kana": "にょ", "romaji": "nyo", "strokes": [] },
+
+    { "kana": "ひゃ", "romaji": "hya", "strokes": [] },
+    { "kana": "ひゅ", "romaji": "hyu", "strokes": [] },
+    { "kana": "ひょ", "romaji": "hyo", "strokes": [] },
+
+    { "kana": "みゃ", "romaji": "mya", "strokes": [] },
+    { "kana": "みゅ", "romaji": "myu", "strokes": [] },
+    { "kana": "みょ", "romaji": "myo", "strokes": [] },
+
+    { "kana": "りゃ", "romaji": "rya", "strokes": [] },
+    { "kana": "りゅ", "romaji": "ryu", "strokes": [] },
+    { "kana": "りょ", "romaji": "ryo", "strokes": [] },
+
+    { "kana": "ぎゃ", "romaji": "gya", "strokes": [] },
+    { "kana": "ぎゅ", "romaji": "gyu", "strokes": [] },
+    { "kana": "ぎょ", "romaji": "gyo", "strokes": [] },
+
+    { "kana": "じゃ", "romaji": "ja", "strokes": [] },
+    { "kana": "じゅ", "romaji": "ju", "strokes": [] },
+    { "kana": "じょ", "romaji": "jo", "strokes": [] },
+
+    { "kana": "びゃ", "romaji": "bya", "strokes": [] },
+    { "kana": "びゅ", "romaji": "byu", "strokes": [] },
+    { "kana": "びょ", "romaji": "byo", "strokes": [] },
+
+    { "kana": "ぴゃ", "romaji": "pya", "strokes": [] },
+    { "kana": "ぴゅ", "romaji": "pyu", "strokes": [] },
+    { "kana": "ぴょ", "romaji": "pyo", "strokes": [] }
+  ],
+  "katakana": [
+    { "kana": "ア", "romaji": "a", "strokes": [] },
+    { "kana": "イ", "romaji": "i", "strokes": [] },
+    { "kana": "ウ", "romaji": "u", "strokes": [] },
+    { "kana": "エ", "romaji": "e", "strokes": [] },
+    { "kana": "オ", "romaji": "o", "strokes": [] },
+
+    { "kana": "カ", "romaji": "ka", "strokes": [] },
+    { "kana": "キ", "romaji": "ki", "strokes": [] },
+    { "kana": "ク", "romaji": "ku", "strokes": [] },
+    { "kana": "ケ", "romaji": "ke", "strokes": [] },
+    { "kana": "コ", "romaji": "ko", "strokes": [] },
+
+    { "kana": "サ", "romaji": "sa", "strokes": [] },
+    { "kana": "シ", "romaji": "shi", "strokes": [] },
+    { "kana": "ス", "romaji": "su", "strokes": [] },
+    { "kana": "セ", "romaji": "se", "strokes": [] },
+    { "kana": "ソ", "romaji": "so", "strokes": [] },
+
+    { "kana": "タ", "romaji": "ta", "strokes": [] },
+    { "kana": "チ", "romaji": "chi", "strokes": [] },
+    { "kana": "ツ", "romaji": "tsu", "strokes": [] },
+    { "kana": "テ", "romaji": "te", "strokes": [] },
+    { "kana": "ト", "romaji": "to", "strokes": [] },
+
+    { "kana": "ナ", "romaji": "na", "strokes": [] },
+    { "kana": "ニ", "romaji": "ni", "strokes": [] },
+    { "kana": "ヌ", "romaji": "nu", "strokes": [] },
+    { "kana": "ネ", "romaji": "ne", "strokes": [] },
+    { "kana": "ノ", "romaji": "no", "strokes": [] },
+
+    { "kana": "ハ", "romaji": "ha", "strokes": [] },
+    { "kana": "ヒ", "romaji": "hi", "strokes": [] },
+    { "kana": "フ", "romaji": "fu", "strokes": [] },
+    { "kana": "ヘ", "romaji": "he", "strokes": [] },
+    { "kana": "ホ", "romaji": "ho", "strokes": [] },
+
+    { "kana": "マ", "romaji": "ma", "strokes": [] },
+    { "kana": "ミ", "romaji": "mi", "strokes": [] },
+    { "kana": "ム", "romaji": "mu", "strokes": [] },
+    { "kana": "メ", "romaji": "me", "strokes": [] },
+    { "kana": "モ", "romaji": "mo", "strokes": [] },
+
+    { "kana": "ヤ", "romaji": "ya", "strokes": [] },
+    { "kana": "ユ", "romaji": "yu", "strokes": [] },
+    { "kana": "ヨ", "romaji": "yo", "strokes": [] },
+
+    { "kana": "ラ", "romaji": "ra", "strokes": [] },
+    { "kana": "リ", "romaji": "ri", "strokes": [] },
+    { "kana": "ル", "romaji": "ru", "strokes": [] },
+    { "kana": "レ", "romaji": "re", "strokes": [] },
+    { "kana": "ロ", "romaji": "ro", "strokes": [] },
+
+    { "kana": "ワ", "romaji": "wa", "strokes": [] },
+    { "kana": "ヲ", "romaji": "wo", "strokes": [] },
+    { "kana": "ン", "romaji": "n", "strokes": [] },
+
+    { "kana": "ガ", "romaji": "ga", "strokes": [] },
+    { "kana": "ギ", "romaji": "gi", "strokes": [] },
+    { "kana": "グ", "romaji": "gu", "strokes": [] },
+    { "kana": "ゲ", "romaji": "ge", "strokes": [] },
+    { "kana": "ゴ", "romaji": "go", "strokes": [] },
+
+    { "kana": "ザ", "romaji": "za", "strokes": [] },
+    { "kana": "ジ", "romaji": "ji", "strokes": [] },
+    { "kana": "ズ", "romaji": "zu", "strokes": [] },
+    { "kana": "ゼ", "romaji": "ze", "strokes": [] },
+    { "kana": "ゾ", "romaji": "zo", "strokes": [] },
+
+    { "kana": "ダ", "romaji": "da", "strokes": [] },
+    { "kana": "ヂ", "romaji": "ji", "strokes": [] },
+    { "kana": "ヅ", "romaji": "zu", "strokes": [] },
+    { "kana": "デ", "romaji": "de", "strokes": [] },
+    { "kana": "ド", "romaji": "do", "strokes": [] },
+
+    { "kana": "バ", "romaji": "ba", "strokes": [] },
+    { "kana": "ビ", "romaji": "bi", "strokes": [] },
+    { "kana": "ブ", "romaji": "bu", "strokes": [] },
+    { "kana": "ベ", "romaji": "be", "strokes": [] },
+    { "kana": "ボ", "romaji": "bo", "strokes": [] },
+
+    { "kana": "パ", "romaji": "pa", "strokes": [] },
+    { "kana": "ピ", "romaji": "pi", "strokes": [] },
+    { "kana": "プ", "romaji": "pu", "strokes": [] },
+    { "kana": "ペ", "romaji": "pe", "strokes": [] },
+    { "kana": "ポ", "romaji": "po", "strokes": [] },
+
+    { "kana": "キャ", "romaji": "kya", "strokes": [] },
+    { "kana": "キュ", "romaji": "kyu", "strokes": [] },
+    { "kana": "キョ", "romaji": "kyo", "strokes": [] },
+
+    { "kana": "シャ", "romaji": "sha", "strokes": [] },
+    { "kana": "シュ", "romaji": "shu", "strokes": [] },
+    { "kana": "ショ", "romaji": "sho", "strokes": [] },
+
+    { "kana": "チャ", "romaji": "cha", "strokes": [] },
+    { "kana": "チュ", "romaji": "chu", "strokes": [] },
+    { "kana": "チョ", "romaji": "cho", "strokes": [] },
+
+    { "kana": "ニャ", "romaji": "nya", "strokes": [] },
+    { "kana": "ニュ", "romaji": "nyu", "strokes": [] },
+    { "kana": "ニョ", "romaji": "nyo", "strokes": [] },
+
+    { "kana": "ヒャ", "romaji": "hya", "strokes": [] },
+    { "kana": "ヒュ", "romaji": "hyu", "strokes": [] },
+    { "kana": "ヒョ", "romaji": "hyo", "strokes": [] },
+
+    { "kana": "ミャ", "romaji": "mya", "strokes": [] },
+    { "kana": "ミュ", "romaji": "myu", "strokes": [] },
+    { "kana": "ミョ", "romaji": "myo", "strokes": [] },
+
+    { "kana": "リャ", "romaji": "rya", "strokes": [] },
+    { "kana": "リュ", "romaji": "ryu", "strokes": [] },
+    { "kana": "リョ", "romaji": "ryo", "strokes": [] },
+
+    { "kana": "ギャ", "romaji": "gya", "strokes": [] },
+    { "kana": "ギュ", "romaji": "gyu", "strokes": [] },
+    { "kana": "ギョ", "romaji": "gyo", "strokes": [] },
+
+    { "kana": "ジャ", "romaji": "ja", "strokes": [] },
+    { "kana": "ジュ", "romaji": "ju", "strokes": [] },
+    { "kana": "ジョ", "romaji": "jo", "strokes": [] },
+
+    { "kana": "ビャ", "romaji": "bya", "strokes": [] },
+    { "kana": "ビュ", "romaji": "byu", "strokes": [] },
+    { "kana": "ビョ", "romaji": "byo", "strokes": [] },
+
+    { "kana": "ピャ", "romaji": "pya", "strokes": [] },
+    { "kana": "ピュ", "romaji": "pyu", "strokes": [] },
+    { "kana": "ピョ", "romaji": "pyo", "strokes": [] }
+  ]
+}

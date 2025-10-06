@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Learn Japanese Language - Interactive Hiragana & Katakana Learning
+    </title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Free interactive web app for learning Japanese Hiragana and Katakana. Practice writing, typing, and recognition with AI-powered handwriting recognition."
+    />
+    <meta
+      name="keywords"
+      content="Japanese, Hiragana, Katakana, Learning, Education, Language, Practice, Handwriting, Recognition, AI"
+    />
+    <meta name="author" content="LJL - Learn Japanese Language" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Learn Japanese Language - Interactive Hiragana & Katakana"
+    />
+    <meta
+      property="og:description"
+      content="Free interactive web app for learning Japanese Hiragana and Katakana with AI handwriting recognition."
+    />
+    <meta property="og:site_name" content="LJL" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Learn Japanese Language - Interactive Learning"
+    />
+    <meta
+      name="twitter:description"
+      content="Free interactive web app for learning Japanese Hiragana and Katakana."
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#007AFF" />
+
+    <!-- Favicon (optional - add later) -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+
+    <link rel="stylesheet" href="src/styles/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>
+        Learn Japanese Language
+        <button id="settingsBtn" class="settings-gear" title="Settings">
+          ⚙️
+        </button>
+      </h1>
+
+      <section class="controls">
+        <label
+          >Alphabet:
+          <select id="alphabetSelect">
+            <option value="hiragana">Hiragana</option>
+            <option value="katakana">Katakana</option>
+          </select>
+        </label>
+
+        <label
+          >Mode:
+          <select id="modeSelect">
+            <option value="romaji">Romaji (type)</option>
+            <option value="draw">Draw (write kana)</option>
+            <option value="romaji2kana">Romaji to kana (text)</option>
+          </select>
+        </label>
+
+        <button id="nextBtn">Start / Next</button>
+        <button id="showAnswerBtn">Show answer</button>
+        <button id="showAlphabetBtn" type="button">Show alphabet</button>
+      </section>
+
+      <section class="quiz">
+        <div id="kanaDisplay" class="kana-display">—</div>
+
+        <div id="romajiArea" class="romaji-area">
+          <input
+            id="answerInput"
+            placeholder="Type romaji here"
+            autocomplete="off"
+          />
+          <button id="checkBtn">Check</button>
+        </div>
+
+        <div id="drawArea" class="draw-area hidden">
+          <!-- drawCanvases will be populated dynamically with one canvas per character -->
+          <div id="drawCanvases" class="draw-canvases"></div>
+          <div class="draw-controls">
+            <button id="submitDrawBtn">Submit</button>
+            <label
+              ><input type="checkbox" id="showRef" checked /> Show
+              reference</label
+            >
+            <label
+              ><input type="checkbox" id="useGoogleAPI" checked /> Use Google AI
+              recognition</label
+            >
+          </div>
+          <div id="drawResult" class="draw-result"></div>
+          <div id="apiStatus" class="api-status"></div>
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+      </section>
+
+      <section class="stats">
+        <h2>Stats</h2>
+        <div id="statsContent">No attempts yet.</div>
+        <button id="resetStats">Reset stats</button>
+      </section>
+    </main>
+
+    <!-- Модальное окно для алфавита -->
+    <div id="alphabetModal" class="alphabet-modal hidden">
+      <div class="alphabet-modal-content">
+        <button id="closeAlphabetModal" class="alphabet-modal-close">×</button>
+        <h2>Alphabet</h2>
+        <div id="alphabetTable"></div>
+      </div>
+    </div>
+
+    <script src="src/helpers/mainframe.js"></script>
+    <script src="src/helpers/draw.js"></script>
+    <script src="src/logic/dataLoader.js"></script>
+    <script src="src/logic/stats.js"></script>
+    <script src="src/logic/similarity.js"></script>
+    <script src="src/logic/handwritingAPI.js"></script>
+    <script src="src/logic/themeManager.js"></script>
+    <script src="src/ui/domElements.js"></script>
+    <script src="src/ui/rendering.js"></script>
+    <script src="src/ui/alphabetModal.js"></script>
+    <script src="src/ui/settingsModal.js"></script>
+    <script src="src/ui/events.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
