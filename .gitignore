@@ -51,3 +51,8 @@ coverage/
 
 # IDE - VSCode
 .history/
+
+# Personal documentation (not for public)
+Readme/
+READY_TO_DEPLOY.md
+setup-git.ps1
