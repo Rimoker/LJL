@@ -461,6 +461,8 @@ footer code {
   flex-wrap: wrap;
   justify-content: center;
   animation: fadeIn var(--animation-duration) ease;
+  /* Prevent accidental scrolling when drawing on mobile */
+  overscroll-behavior: contain;
 }
 
 .draw-canvas-wrap {
@@ -504,6 +506,10 @@ footer code {
 .user-canvas {
   z-index: 2;
   background: transparent;
+  /* Prevent scrolling/zooming on mobile when drawing */
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Hide reference canvases */

@@ -12,6 +12,7 @@
     cardSize: 80,
     borderRadius: 12,
     animationsEnabled: true,
+    speechEnabled: true,
     primaryColor: "#007AFF",
     backgroundColor: "#FFFFFF",
     textColor: "#000000",

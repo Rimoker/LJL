@@ -87,6 +87,17 @@
           </div>
         </div>
 
+        <div class="settings-section">
+          <h3>Audio</h3>
+          
+          <div class="setting-item">
+            <label class="setting-checkbox">
+              <input type="checkbox" id="settingSpeech" checked />
+              <span>🔊 Enable pronunciation (Text-to-Speech)</span>
+            </label>
+          </div>
+        </div>
+
         <div class="settings-actions">
           <button id="resetSettingsBtn" class="btn-secondary">Reset to defaults</button>
           <button id="saveSettingsBtn" class="btn-primary">Save changes</button>
@@ -190,6 +201,8 @@
       settings.primaryColor;
     document.getElementById("settingAnimations").checked =
       settings.animationsEnabled;
+    document.getElementById("settingSpeech").checked =
+      settings.speechEnabled !== false; // Default to true
   }
 
   /**
@@ -211,9 +224,16 @@
       cardSize: parseInt(document.getElementById("settingCardSize").value),
       primaryColor: document.getElementById("settingPrimaryColor").value,
       animationsEnabled: document.getElementById("settingAnimations").checked,
+      speechEnabled: document.getElementById("settingSpeech").checked,
     };
 
     window.ThemeManager.saveSettings(newSettings);
+    
+    // Update TextToSpeech setting if available
+    if (window.TextToSpeech) {
+      window.TextToSpeech.setEnabled(newSettings.speechEnabled);
+    }
+    
     closeModal();
 
     // Show success message

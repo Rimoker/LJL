@@ -17,10 +17,26 @@
     this._onDown = this._onDown.bind(this);
     this._onMove = this._onMove.bind(this);
     this._onUp = this._onUp.bind(this);
+    this._preventScroll = this._preventScroll.bind(this);
+    
     this.canvas.addEventListener("pointerdown", this._onDown);
     this.canvas.addEventListener("pointermove", this._onMove);
     window.addEventListener("pointerup", this._onUp);
+    
+    // Prevent scrolling/zooming when touching the canvas
+    this.canvas.addEventListener("touchstart", this._preventScroll, { passive: false });
+    this.canvas.addEventListener("touchmove", this._preventScroll, { passive: false });
+    this.canvas.addEventListener("touchend", this._preventScroll, { passive: false });
+    
+    // Also prevent default pointer events on canvas
+    this.canvas.style.touchAction = "none";
+    
     this.clear();
+  };
+
+  KanaDrawInstance.prototype._preventScroll = function (e) {
+    // Prevent default touch behavior (scrolling, zooming)
+    e.preventDefault();
   };
 
   KanaDrawInstance.prototype._onDown = function (e) {

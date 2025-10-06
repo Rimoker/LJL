@@ -150,6 +150,14 @@
     const kanaText = k.kana || k.romaji || "—";
     const romajiText = k.romaji || "";
 
+    // Speak the kana character if TextToSpeech is available and enabled
+    if (window.TextToSpeech && window.TextToSpeech.isEnabled()) {
+      // Speak the kana in Japanese
+      if (kanaText && kanaText !== "—") {
+        window.TextToSpeech.speak(kanaText, "kana");
+      }
+    }
+
     if (mode !== "draw" && mode !== "romaji2kana") {
       if (kanaText.length <= 1) {
         const span = document.createElement("div");
